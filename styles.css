@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Lexend, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     display: flex;
@@ -10,12 +10,13 @@ body {
 
 .login-container {
     background-color: #fff;
-    padding: 20px;
+    padding: 100px;
+    margin-left: 500px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
     text-align: center;
-    position: relative;
+    position: absolute;
 }
 
 .login-container h2 {
@@ -53,13 +54,7 @@ body {
     cursor: pointer;
 }
 
-.text {
-    position: absolute;
-    top: 28px;
-    left: 31px;
-    font-family: Lexend; /* Heading */
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 48px;
-    color: #171A1FFF; /* neutral-900 */
+.sub-heading {
+    margin-top: 20px;
+    color: #666;
 }
