@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lobby Page</title>
+    <link rel="stylesheet" href="CSS/menu.css">
+</head>
+<body>
+
+<div class="top-bar">
+    <a href="index.html" class="logout-button">Logout</a>
+    <a href="mainMenu.html" class="mainMenu-button">Menu</a>
+</div>
+
+<div class="body">
+
+    <div id="image-expense">
+        <img src="pics/X-BudgetSymbol.png" alt="Welcome Image">
+    </div>
+
+    <div class="expense-form">
+        <form action="submit_expense.php" method="post">
+            <h1>Add Expense &#128178;</h1>
+            <label for="expense-category">Select Category:</label>
+            <select id="expense-category" name="expense-category">
+                <option value="food">Food</option>
+                <option value="transportation">Transportation</option>
+                <option value="utilities">Utilities</option>
+            </select>
+
+            <label for="expense-amount">Enter Amount:</label>
+            <input type="number" id="expense-amount" name="expense-amount" required>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>
