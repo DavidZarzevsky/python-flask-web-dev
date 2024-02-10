@@ -1,15 +1,5 @@
 /* -------------------  Site template  ------------------- */
 
-body {
-    font-family: Manrope, sans-serif;
-    background-color: #fff;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
 .top-bar {
     position: absolute;
     top: 1vh;
@@ -44,11 +34,66 @@ body {
 }
 
 #image-tips {
-    position: relative;
-    right: 42vw;
-    bottom: 25vh;
-    transform: scale(0.4);
+    position: absolute;
+    top: -70px;
+    left: -200px;
+     transform: scale(0.3);
     transition: transform 0.3s ease-in-out;
+}
+
+.Header {
+    position: absolute;
+    top: 125px;
+    left: 53%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+}
+
+.boldAndUnderlineHeader{
+      font-weight: bold;
+    text-decoration: underline;
+}
+
+.Insights{
+    position: absolute;
+    width: 420px;
+    height: 100px;
+    background: #F5F1FEFF;
+    border-radius: 6px;
+    box-shadow: 0px 4px 9px #171a1f, 0px 0px 2px #171a1f;
+     padding: 0 15px;
+
+}
+
+#insights1{
+    top: 250px;
+    left: 35px;
+}
+
+#insights2{
+    top: 250px;
+    left: 520px;
+}
+
+#insights3{
+    top: 400px;
+    left: 35px;
+}
+
+#insights4{
+    top: 400px;
+    left: 520px;
+}
+
+.boldAndUnderline{
+    font-weight: bold;
+    text-decoration: underline;
+}
+.emoji{
+  position: absolute;
+  top: 5px;
+  left: 200px;
+  font-size: 20px;
 }
 
 /* -------------------------------------- */
