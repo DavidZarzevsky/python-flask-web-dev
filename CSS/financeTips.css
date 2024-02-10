@@ -35,9 +35,9 @@
 
 #image-tips {
     position: absolute;
-    top: -70px;
+    top: -50px;
     left: -200px;
-     transform: scale(0.3);
+     transform: scale(0.4);
     transition: transform 0.3s ease-in-out;
 }
 
@@ -64,25 +64,27 @@
      padding: 0 15px;
 
 }
-
+.Insights:hover{
+   box-shadow: 0px 8px 14px #171a1f, 0px 0px 5px #171a1f;
+}
 #insights1{
     top: 250px;
-    left: 35px;
+    left: 330px;
 }
 
 #insights2{
     top: 250px;
-    left: 520px;
+    left: 830px;
 }
 
 #insights3{
     top: 400px;
-    left: 35px;
+    left: 330px;
 }
 
 #insights4{
     top: 400px;
-    left: 520px;
+    left: 830px;
 }
 
 .boldAndUnderline{
