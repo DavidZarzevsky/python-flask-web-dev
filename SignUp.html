@@ -4,41 +4,46 @@
     <meta charset="UTF-8">
     <title>Sign Up</title>
     <link rel="stylesheet" href="CSS/SignUp.css">
+    <link rel="stylesheet" href="CSS/GlobalStyleSheet.css">
+
 </head>
 <body>
 <div class="top-bar"></div>
-<div id="image-SignUp">
+
+<div class="content">
+    <div class="image-SignUp">
         <img src="pics/X-BudgetSymbol.png" alt="Welcome Image">
     </div>
-<div class="signup-container">
-    <h1 id="SignUpHeader">Sign up</h1>
-    <div class="input-row">
-        <div class="first-name">
-            <label class="label" for="FirstNameTextBox">First name</label>
-            <input type="text" id="FirstNameTextBox" name="FirstName" placeholder="Input first name">
+    <div class="signup-container">
+        <h1>Sign Up</h1>
+        <div class="input-row">
+            <div class="first-name">
+                <label class="label" for="FirstNameTextBox">First name</label>
+                <input type="text" id="FirstNameTextBox" name="FirstName" placeholder="Input first name">
+            </div>
+            <div class="last-name">
+
+                <label class="label" for="LastNameTextBox">Last name</label>
+                <input type="text" id="LastNameTextBox" name="LastName" placeholder="Input last name">
+
+            </div>
+
         </div>
-        <div class="last-name">
 
-            <label class="label" for="LastNameTextBox">Last name</label>
-            <input type="text" id="LastNameTextBox" name="LastName" placeholder="Input last name">
-
+        <div class="input-group">
+            <label class="label" for="EmailTextBox">Email</label>
+            <input type="text" id="EmailTextBox" name="Email" placeholder="example.email@gmail.com">
         </div>
 
+        <div class="input-group">
+            <label class="label" for="PasswordTextBox">Password</label>
+            <input type="text" id="PasswordTextBox" name="Password" placeholder="Enter at least 8+ characters">
+        </div>
+
+        <button>Sign up</button>
+        <p>Already have an account? <a href="index.html">Log in</a></p>
+
     </div>
-
-    <div class="input-group">
-        <label class="label" for="EmailTextBox">Email</label>
-        <input type="text" id="EmailTextBox" name="Email" placeholder="example.email@gmail.com">
-    </div>
-
-    <div class="input-group">
-        <label class="label" for="PasswordTextBox">Password</label>
-        <input type="text" id="PasswordTextBox" name="Password" placeholder="Enter at least 8+ characters">
-    </div>
-
-    <button>Sign up</button>
-    <p>Already have an account? <a href="index.html">Log in</a></p>
-
 </div>
 </body>
 </html>
