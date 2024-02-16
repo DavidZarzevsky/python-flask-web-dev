@@ -27,7 +27,6 @@
     text-align: center;
     transition: background-color 0.3s ease-in-out;
     text-decoration: none;
-    /*position: absolute;*/
     top: 2vh;
     left: 1vw;
     padding: 1.5vh;
@@ -49,9 +48,21 @@
     justify-content: space-between;
     width: 100%;
     padding: 50px 150px;
+    animation: fadeInFromLeft 1s ease-out;
 }
 
-.body{
+@keyframes fadeInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.body {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
@@ -61,9 +72,11 @@
     padding: 20px 20px;
     margin-right: 30px;
     border-radius: 10px;
+    border: 2px solid black;
 
 }
-.body h1{
+
+.body h1 {
     display: flex;
     justify-content: center;
     font-family: Lexend, sans-serif;
@@ -72,13 +85,13 @@
     font-size: 35px;
 }
 
-.body p{
-    font-family: Manrope  sans-serif;
+.body p {
+    font-family: Manrope sans-serif;
     font-size: 18px;
 
 }
 
-.body input{
+.body input {
     width: 83%;
     border-radius: 8px;
     font-size: 16px;
@@ -86,7 +99,7 @@
     flex-direction: column;
 }
 
-.body #message{
+.body #message {
     padding-bottom: 50px;
     margin-bottom: 20px;
     width: 83%;
@@ -97,23 +110,82 @@
 }
 
 .message {
-  width: 30%;
-  padding: 10px;
-  margin-top: 15px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
+    width: 30%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 .Information {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 40%;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: #548185;
+    margin-right: 30px;
+    animation: slideInFromRight 1s ease-out;
+
 }
 
-.image-worker{
+@keyframes slideInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(400px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+.image-worker {
+    display: flex;
+    flex-direction: column;
     transform: scale(0.7);
     transition: transform 0.3s ease-in-out;
+    margin-left: 10px;
+    padding: 10px;
+    background-color: white;
+}
+
+.filling {
+    width: 100%;
+    padding: 10px 20px;
+    color: black;
+    font-size: 18px;
+    font-family: Manrope sans-serif;
+
+
+}
+
+.direction {
+    display: flex;
+    flex-display: row;
+    margin-bottom: 20px;
+}
+
+.contact-email {
+    display: flex;
+    flex-display: row;
+    margin-bottom: 20px;
+
+}
+
+.phone-number {
+    display: flex;
+    flex-display: row;
+    margin-bottom: 20px;
+    padding-left: 3px;
+}
+
+
+.emojis {
+    padding-right: 10px;
+    color: white;
 }
