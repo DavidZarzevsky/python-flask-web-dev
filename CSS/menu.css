@@ -76,13 +76,6 @@ body {
     width: 5vw;
 }
 
-#image-welcome {
-    margin-right: 50vw;
-    margin-bottom: 2vh;
-}
-
-/* ADD EXPENSE */
-
 .mainMenu-button {
     position: absolute;
     top: 2vh;
@@ -91,9 +84,17 @@ body {
     width: 5vw;
 }
 
+#image-welcome {
+    margin-right: 50vw;
+    margin-bottom: 2vh;
+    transform: scale(0.8);
+}
+
+/* ADD EXPENSE */
+
 .expense-form {
     position: relative;
-    margin-bottom: 50vh;
+    bottom: 25vh;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -148,8 +149,9 @@ body {
 
 #image-expense {
     position: relative;
-    right: 38vw;
-    top: 35vh;
+    right: 42vw;
+    top: 7vh;
+    transform: scale(0.4);
 }
 
 
