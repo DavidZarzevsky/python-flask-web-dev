@@ -12,8 +12,8 @@
 .title{
     font-family: Lexend, sans-serif;
     font-size: 30px;
-    height: 15%;
-    margin: 40px 0px;
+    height: 20%;
+    margin: 20px 0px;
     color: #6b888a;
 }
 .inside-title{
@@ -43,7 +43,7 @@
     align-items: center;
     /*justify-content: space-around;*/
     width: 100%;
-    padding: 0px 30px;
+    padding: 15px 30px;
 
 }
 .Insights{
