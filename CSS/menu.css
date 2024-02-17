@@ -1,26 +1,13 @@
-
-.content{
+.content {
+    position: relative;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    margin-top: 10vh;
-}
-
-.menu-1,
-.menu-2 {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
+    /*justify-content: center;*/
     flex-direction: column;
-    font-size-adjust: 2;
 }
-
-.menu-1 { right: 37vw; }
-.menu-2 { right: 22vw; }
 
 .menu-button {
+    width: 20vw;
     background-color: #3498DBFF;
     color: #fff;
     padding: 1.5vh 2vw;
@@ -28,10 +15,9 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-bottom: 1.5vh;
-    width: 10vw;
+    margin: 0 auto 1.5vh;
     text-align: center;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
     text-decoration: none;
 }
 
@@ -40,13 +26,8 @@
     background-color: #2E86C1FF;
 }
 
-.mainMenu-button:hover {
-    background-color: #2E86C1FF;
-    color: #fff;
-}
-
-#image-welcome {
-    margin-right: 50vw;
-    margin-bottom: 2vh;
-    transform: scale(0.8);
+.image {
+    margin: 70px;
+    width: 300px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
 }
