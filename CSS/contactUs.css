@@ -86,12 +86,14 @@
 }
 
 .body p {
+    display: flex;
     font-family: Manrope sans-serif;
     font-size: 18px;
 
 }
 
 .body input {
+    display: flex;
     width: 83%;
     border-radius: 8px;
     font-size: 16px;
@@ -100,6 +102,7 @@
 }
 
 .body #message {
+    display: flex;
     padding-bottom: 50px;
     margin-bottom: 20px;
     width: 83%;
@@ -110,6 +113,7 @@
 }
 
 .message {
+    display: flex;
     width: 30%;
     padding: 10px;
     margin-top: 15px;
@@ -121,13 +125,16 @@
 }
 
 .Information {
+   font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    width: 40%;
-    border: 2px solid black;
-    border-radius: 8px;
+    justify-content: flex-start;
+    width: 450px;
     background-color: #548185;
+    padding: 20px 20px;
     margin-right: 30px;
+    border-radius: 10px;
+    border: 2px solid black;
     animation: slideInFromRight 1s ease-out;
 
 }
@@ -155,6 +162,9 @@
 }
 
 .filling {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
     padding: 10px 20px;
     color: black;
