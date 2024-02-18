@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My account</title>
+    <link rel="stylesheet" href="CSS/myAccount.css">
+    <link rel="stylesheet" href="CSS/GlobalStyleSheet.css">
+</head>
+<body>
+
+<div class="top-bar">
+    <div class="image-logo">
+        <img src="pics/X-BudgetSymbol.png" alt="Welcome Image">
+    </div>
+
+    <div class="bar-left-side">
+        <a href="index.html" class="logout-button">Log out</a>
+        <a href="mainMenu.html" class="mainMenu-button">Menu</a>
+    </div>
+
+</div>
+
+<div class="page">
+    <div class="personal-info">
+        <h1 class="update-info-h1">Update your information &#x1F504;</h1>
+        <div class="input-row">
+            <div class="first-name">
+                <label class="label" for="FirstNameTextBox">First name:</label>
+                <input type="text" id="FirstNameTextBox" name="FirstName" placeholder="First name">
+            </div>
+            <div class="last-name">
+
+                <label class="label" for="LastNameTextBox">Last name:</label>
+                <input type="text" id="LastNameTextBox" name="LastName" placeholder="Last name">
+
+            </div>
+
+        </div>
+
+        <div class="email-group">
+            <label class="label" for="EmailTextBox">Email address:</label>
+            <input type="text" id="EmailTextBox" name="Email" placeholder="example.email@gmail.com">
+        </div>
+
+        <div class="currNage-group">
+            <div class="currency">
+                <form action="select_currency.php" method="post">
+                    <label for="currency-category">Select currency:</label>
+                    <select id="currency-category" name="currency-category">
+                        <option value="">Choose currency</option>
+                        <option value="israeli-new-shekel">₪ ILS</option>
+                        <option value="united-states-dollar">$ USD</option>
+                        <option value="euro">€ EUR</option>
+                        <option value="british-pound-sterling">£ GBP</option>
+                    </select>
+                </form>
+            </div>
+            <div class="age">
+                <label for="date"> Birthdate:</label>
+                <input type="date" id="date" name="date">
+            </div>
+        </div>
+        <div class="languageNgender">
+            <div class="language">
+                <form action="select_language.php" method="post">
+                    <label for="language-category">Select language:</label>
+                    <select id="language-category" name="language-category">
+                        <option value="">Choose language</option>
+                        <option value="hebrew">Hebrew</option>
+                        <option value="english">English</option>
+                        <option value="spanish">Spanish</option>
+                        <option value="french">French</option>
+                        <option value="german">German</option>
+                    </select>
+                </form>
+            </div>
+
+            <div class="gender">
+                <form action="select_gender.php" method="post">
+                    <label for="gender-category">Select gender:</label>
+                    <select id="gender-category" name="gender-category">
+                        <option value="">Choose gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="prefer-not-to-say">Prefer not to say</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="save">Save changes</button>
+            <button class="cancel">cancel changes</button>
+        </div>
+    </div>
+
+
+</div>
+
+</body>
+</html>
