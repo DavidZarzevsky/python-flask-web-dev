@@ -15,7 +15,7 @@
         <img src="pics/X-BudgetSymbol.png" alt="Welcome Image">
     </div>
     <div class="signup-container">
-        <h1>Sign Up</h1>
+        <h1>Sign Up &#x1F4DD;</h1>
         <div class="input-row">
             <div class="first-name">
                 <label class="label" for="FirstNameTextBox">First name</label>
@@ -28,6 +28,24 @@
 
             </div>
 
+        </div>
+
+        <div class="genderNage">
+             <div class="age">
+                <label for="date"> Birthdate:</label>
+                <input type="date" id="date" name="date">
+            </div>
+            <div class="gender">
+                <form action="select_gender.php" method="post">
+                    <label for="gender-category">Select gender:</label>
+                    <select id="gender-category" name="gender-category">
+                        <option value="">Choose gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="prefer-not-to-say">Prefer not to say</option>
+                    </select>
+                </form>
+            </div>
         </div>
 
         <div class="input-group">
