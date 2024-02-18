@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <script src="JavaScript/expensesView.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="CSS/GlobalStyleSheet.css">
+    <link rel="stylesheet" href="CSS/myExpenses.css">
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <div class="image-logo">
+            <img src="pics/X-BudgetSymbol.png" alt="Welcome Image">
+        </div>
+        <div class="bar-left-side">
+            <a href="index.html" class="logout-button">Log out</a>
+            <a href="mainMenu.html" class="mainMenu-button">Menu</a>
+        </div>
+    </div>
+
+    <div class="content">
+
+        <div class="expenses-overview">
+            <h1>Expenses Overview</h1>
+            <br>
+            <div class="pie-chart">
+                <canvas id="myChart" width="400" height="400"></canvas>
+            </div>
+        </div>
+
+        <div class="expenses-breakdown">
+
+            <div class="total-expenses">
+                <h1>Total Expenses:</h1>
+                <span id="totalExpenses">0</span>
+                <span>$</span>
+            </div>
+            <br>
+            <div class="expense-dropdown">
+                <label>Select Expense Type:</label>
+                <select id="expenseTypeDropdown" onchange="updateExpensesByType()">
+                    <option value="all">All</option>
+                    <option value="housing">Housing</option>
+                    <option value="food">Food</option>
+                    <option value="transportation">Transportation</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="others">Others</option>
+                </select>
+            </div>
+
+            <div class="expenses-by-type">
+                <h2>Expenses by Type</h2>
+                <div id="expensesByType"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

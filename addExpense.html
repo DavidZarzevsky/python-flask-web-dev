@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lobby Page</title>
+    <script src="JavaScript/addExpenseValidation.js"></script>
     <link rel="stylesheet" href="CSS/GlobalStyleSheet.css">
     <link rel="stylesheet" href="CSS/addExpense.css">
 </head>
@@ -23,7 +24,7 @@
     </div>
 
     <div class="expense-form">
-        <form action="submit_expense.php" method="post">
+        <form id="add-expense-form" method="post">
             <h1>Add Expense &#128178;</h1>
             <label for="expense-category">Select Category:</label>
             <select id="expense-category" name="expense-category">

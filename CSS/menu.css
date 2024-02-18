@@ -6,7 +6,7 @@
 }
 
 .menu-button {
-    width: 20vw;
+    width: 26vw;
     background-color: #3498DBFF;
     color: #fff;
     padding: 1.5vh 2vw;
@@ -27,7 +27,7 @@
 }
 
 .image {
-    margin: 70px;
+    margin: 30px;
     width: 300px;
     height: auto;
 }
