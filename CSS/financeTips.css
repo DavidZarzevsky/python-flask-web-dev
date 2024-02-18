@@ -4,7 +4,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 .title{
@@ -12,18 +11,14 @@
     color: #6b888a;
     margin: 1vh;
 }
-
-.inside-title{
-    display: flex;
-    flex-direction: row;
-    font-family: Lexend, sans-serif;
-    font-size: 18px;
-    text-decoration: none;
-}
-
 .content span{
     font-weight: bold;
-    text-decoration: underline;
+}
+
+.inside-title{
+    font-family: Lexend, sans-serif;
+    font-size: 20px;
+    text-decoration: none;
 }
 
 .all-insights{
@@ -39,7 +34,6 @@
 }
 
 .Insights{
-    display: flex;
     flex-direction: column;
     align-items: center;
     width: 550px;
@@ -53,7 +47,6 @@
     font-size: 18px;
     text-align: center;
 }
-
 
 .Insights:hover{
    box-shadow: 0 8px 14px #171a1f, 0 0 5px #171a1f;
