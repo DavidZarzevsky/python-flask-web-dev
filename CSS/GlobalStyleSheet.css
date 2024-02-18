@@ -10,7 +10,6 @@ body {
     width: 100%;
     font-family: Manrope, sans-serif;
     /*overflow: hidden;*/
-
 }
 
 .top-bar {
@@ -36,15 +35,12 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-bottom: 1.5vh;
+    margin: 1.5vh;
     width: 9vw;
     text-align: center;
     transition: background-color 0.3s ease-in-out;
     text-decoration: none;
-}
-
-.mainMenu-button {
-    left: 8vw;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 }
 
 .menu-button:hover,
