@@ -1,11 +1,10 @@
-
 .expense-form {
     position: relative;
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
-    top: 10vh;
+    top: 7vh;
 }
 
 .expense-form h1 {
@@ -16,6 +15,7 @@
 
 .expense-form form {
     display: flex;
+    font-size: 2.5vh;
     flex-direction: column;
     align-items: center;
     background: #F5F1FEFF;
