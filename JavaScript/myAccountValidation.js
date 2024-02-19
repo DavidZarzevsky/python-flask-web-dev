@@ -11,9 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
             const email = document.getElementById("EmailTextBox").value.trim();
             const currency = document.getElementById("currency-category").value.trim();
             const gender = document.getElementById("gender-category").value.trim();
-            const language = document.getElementById("language-category").value.trim();
 
-            if (firstName === '' || lastName === '' || birthdate === '' || email === '' || currency === '' || currency === 'Choose currency' || language === '' || language === 'Choose language' || gender === '' || gender === 'Choose gender') {
+            if (firstName === '' || lastName === '' || birthdate === '' || email === '' || currency === '' || currency === 'Choose currency'  || gender === '' || gender === 'Choose gender') {
                 alert("Please fill out all fields.");
                 return;
             }
