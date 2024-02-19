@@ -73,8 +73,8 @@
     margin-left: 30%;
     padding: 8px;
     margin-top: 12px;
-    background-color: #F5F1FEFF;
-    color: #fff;
+    background-color: #3498DBFF;
+    color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -149,5 +149,5 @@
 
 .emojis {
     padding-right: 10px;
-    color: white;
+    color: black ;
 }
