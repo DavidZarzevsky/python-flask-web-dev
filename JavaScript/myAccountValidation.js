@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
                 age--;
             }
+
             if (age < 18) {
                 alert("You must be at least 18 years old.");
                 return;
@@ -39,7 +40,11 @@ document.addEventListener("DOMContentLoaded", function () {
             // Form submission successful
             alert("Personal information has been saved.");
             form.submit();
+            window.location.href = "mainMenu.html";
         });
+
+
+
     } else {
         console.error("Form element not found.");
     }

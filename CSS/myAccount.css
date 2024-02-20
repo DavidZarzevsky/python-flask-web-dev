@@ -63,7 +63,7 @@
 }
 
 .currency select option:checked {
-    background-color: #1d55c5;
+    background-color: #3498DBFF;
     font-weight: bold;
 }
 

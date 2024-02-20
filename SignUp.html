@@ -5,7 +5,7 @@
     <title>Sign Up</title>
     <link rel="stylesheet" href="CSS/SignUp.css">
     <link rel="stylesheet" href="CSS/GlobalStyleSheet.css">
-    <script src="JavaScript/addExpenseValidation.js"></script>
+    <script src="JavaScript/signUpValidation.js"></script>
 </head>
 <body>
 <div class="top-bar"></div>
@@ -15,7 +15,7 @@
         <img src="pics/X-BudgetSymbol.png" alt="Welcome Image">
     </div>
     <div class="signup-container">
-        <form id="signup-form" action="action-url" method="post">
+        <form id="signup-form" action="#" method="post">
             <h1>Sign Up &#x1F4DD;</h1>
             <div class="input-row">
                 <div class="first-name">
@@ -31,13 +31,10 @@
 
             </div>
 
-            <div class="genderNage">
-                <div class="age">
-                    <label for="date"> Birthdate:</label>
-                    <input type="date" id="date" name="date">
-                </div>
+            <div class="gender-currency">
+
                 <div class="gender">
-                    <!--                <form action="select_gender.php" method="post">-->
+
                     <label for="gender-category">Select gender:</label>
                     <select id="gender-category" name="gender-category">
                         <option value="">Choose gender</option>
@@ -45,7 +42,27 @@
                         <option value="female">Female</option>
                         <option value="prefer-not-to-say">Prefer not to say</option>
                     </select>
-                    <!--                </form>-->
+
+                </div>
+                 <div class="currency">
+
+                    <label for="currency-category">Select currency:</label>
+                    <select id="currency-category" name="currency-category">
+                        <option value="">Choose currency</option>
+                        <option value="israeli-new-shekel">₪ ILS</option>
+                        <option value="united-states-dollar">$ USD</option>
+                        <option value="euro">€ EUR</option>
+                        <option value="british-pound-sterling">£ GBP</option>
+                    </select>
+
+                </div>
+            </div>
+
+
+            <div class="input-group">
+                 <div class="age">
+                    <label for="date"> Birthdate:</label>
+                    <input type="date" id="date" name="date">
                 </div>
             </div>
 
