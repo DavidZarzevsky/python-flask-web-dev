@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 return;
             }
             // addExpenseForm.submit();
-
             window.location.href = "mainMenu.html";
         });
     } else {

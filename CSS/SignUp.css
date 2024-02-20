@@ -10,7 +10,6 @@
     box-shadow: 0 3px 20px rgba(23, 26, 31, 0.3), 0 0 2px rgba(23, 26, 31, 0.2);
 }
 
-
 .content {
     display: flex;
     flex-direction: row;
