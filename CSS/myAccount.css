@@ -19,7 +19,6 @@
     padding: 15px;
 }
 
-
 .input-row {
     display: flex;
     flex-direction: row;
@@ -102,9 +101,3 @@
     border-radius: 4px;
     cursor: pointer;
 }
-
-
-
-
-
-
