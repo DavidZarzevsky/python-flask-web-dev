@@ -11,9 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
             const email = document.getElementById("EmailTextBox").value.trim();
             const currency = document.getElementById("currency-category").value.trim();
             const gender = document.getElementById("gender-category").value.trim();
-            const language = document.getElementById("language-category").value.trim();
 
-            if (firstName === '' || lastName === '' || birthdate === '' || email === '' || currency === '' || currency === 'Choose currency' || language === '' || language === 'Choose language' || gender === '' || gender === 'Choose gender') {
+            if (firstName === '' || lastName === '' || birthdate === '' || email === '' || currency === '' || currency === 'Choose currency'  || gender === '' || gender === 'Choose gender') {
                 alert("Please fill out all fields.");
                 return;
             }
@@ -32,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
                 age--;
             }
+
             if (age < 18) {
                 alert("You must be at least 18 years old.");
                 return;
@@ -40,7 +40,11 @@ document.addEventListener("DOMContentLoaded", function () {
             // Form submission successful
             alert("Personal information has been saved.");
             form.submit();
+            window.location.href = "mainMenu.html";
         });
+
+
+
     } else {
         console.error("Form element not found.");
     }

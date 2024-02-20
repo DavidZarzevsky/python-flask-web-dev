@@ -8,7 +8,7 @@
 
 .personal-info {
     background-color: #F5F1FEFF;
-    padding: 20px 100px 100px 100px;
+    padding: 20px 100px 100px 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -48,7 +48,7 @@
     margin-left: 10px;
 }
 
-.currNage-group {
+.currNgender-group {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -57,13 +57,13 @@
     width: 100%;
 }
 
-.currency select, .languageNgender select {
+.currNgender-group select {
     padding: 8px;
     font-size: 16px;
 }
 
 .currency select option:checked {
-    background-color: #1d55c5;
+    background-color: #3498DBFF;
     font-weight: bold;
 }
 
@@ -72,10 +72,10 @@
     font-size: 16px;
 }
 
-.languageNgender {
+.age {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     margin-right: 10px;
     margin-bottom: 15px;
     width: 100%;

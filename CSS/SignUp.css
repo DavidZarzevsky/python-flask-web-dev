@@ -26,7 +26,7 @@
     width: 450px;
     background-color: #8db5b7;
     margin-left: 120px;
-    padding: 30px 30px 0 30px;
+    padding: 15px 30px 0 30px;
     animation: slideInFromRight 1s ease-out;
 }
 @keyframes slideInFromRight {
@@ -36,8 +36,8 @@
 
 .signup-container h1{
     font-family: Lexend, sans-serif;
-    font-size: 25px;
-    padding: 20px 0;
+    font-size: 24px;
+    padding: 10px 0;
     font-weight: bolder;
 }
 
@@ -52,9 +52,9 @@
 
 
 #SignUpHeader {
-    margin-top: 70px;
+    margin-top: 50px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .label {
@@ -67,7 +67,7 @@
     flex-direction: row;
     justify-content: space-between;
     margin-right: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     width: 100%;
 }
 
@@ -75,19 +75,32 @@
     padding: 8px;
 }
 
-.genderNage{
-       display: flex;
+.gender-currency{
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-right: 10px;
-    margin-bottom: 15px;
+    text-align: left;
+    /*margin-right: 10px;*/
+    margin-bottom: 10px;
     width: 100%;
 }
 
-.age input[type="date"], .gender select {
-    padding: 8px;
+
+.currency select{
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+}
+/*.age input[type="date"],*/
+.gender select{
+    padding: 10px;
     font-size: 16px;
 
+}
+
+.currency select option:checked {
+    background-color: #3498DBFF;
+    font-weight: bold;
 }
 
 
@@ -96,6 +109,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    text-align: left;
 
 }
 .input-group input {
@@ -103,7 +117,7 @@
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
-    margin-top: 5px;
+    margin: 5px 0px;
 }
 
 button {
