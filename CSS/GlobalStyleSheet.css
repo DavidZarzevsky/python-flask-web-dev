@@ -11,19 +11,19 @@ body {
     font-family: Manrope, sans-serif;
     /*overflow: hidden;*/
 }
-.buttom-bar{
-    /*css*/
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-    width: 100%;
-    background-color: #fff;
-    border-radius: 0;
-    box-shadow: 0 3px 10px rgba(23, 26, 31, 0.3), 0 0 2px rgba(23, 26, 31, 0.2);
-    font-size: 12px;
-}
+/*.buttom-bar{*/
+/*    !*css*!*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    padding: 5px;*/
+/*    width: 100%;*/
+/*    background-color: #fff;*/
+/*    border-radius: 0;*/
+/*    box-shadow: 0 3px 10px rgba(23, 26, 31, 0.3), 0 0 2px rgba(23, 26, 31, 0.2);*/
+/*    font-size: 12px;*/
+/*}*/
 /*html*/
 /*<footer class="buttom-bar">*/
 /*        <div class="rights">*/
