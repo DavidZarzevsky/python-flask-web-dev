@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
-            // Your age validation code here
+            // Age validation
             const today = new Date();
             const birthDate = new Date(birthdate);
             let age = today.getFullYear() - birthDate.getFullYear();

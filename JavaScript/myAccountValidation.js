@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const currency = document.getElementById("currency-category").value.trim();
             const gender = document.getElementById("gender-category").value.trim();
 
-            if (firstName === '' || lastName === '' || birthdate === '' || email === '' || currency === '' || currency === 'Choose currency'  || gender === '' || gender === 'Choose gender') {
+            if (firstName === '' || lastName === '' || birthdate === '' || email === '' || currency === '' || currency === 'Choose currency' || gender === '' || gender === 'Choose gender') {
                 alert("Please fill out all fields.");
                 return;
             }
@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
             form.submit();
             window.location.href = "mainMenu.html";
         });
-
 
 
     } else {

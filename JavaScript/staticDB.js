@@ -12,8 +12,8 @@ const users = [
 
 const dbUsers = {
     users: {
-        get: function(email, password) {
-            return users.find(function(user) {
+        get: function (email, password) {
+            return users.find(function (user) {
                 return user.email === email && user.password === password;
             });
         }
@@ -22,7 +22,7 @@ const dbUsers = {
 
 window.dbUsers = dbUsers;
 
-// Write json of expenses
+//  json of expenses
 const expenses = [
     {
         expenseCategory: "Food",
@@ -53,8 +53,8 @@ const expenses = [
 
 const dbExpenses = {
     expenses: {
-        get: function(expenseCategory, expenseAmount, expenseDate) {
-            return expenses.find(function(expense) {
+        get: function (expenseCategory, expenseAmount, expenseDate) {
+            return expenses.find(function (expense) {
                 return (
                     expense.expenseCategory === expenseCategory &&
                     expense.expenseAmount === expenseAmount &&
@@ -63,14 +63,14 @@ const dbExpenses = {
             });
         }
     },
-    getAllExpensesByCategory: function() {
+    getAllExpensesByCategory: function () {
         return expenses;
     }
 };
 
 window.dbExpenses = dbExpenses;
 
-// Write json of categories
+//  json of categories
 const categories = [
     {
         categoryName: "Food",
@@ -90,8 +90,8 @@ const categories = [
 ];
 
 const dbCategories = {
-    get: function(categoryName) {
-        return categories.find(function(category) {
+    get: function (categoryName) {
+        return categories.find(function (category) {
             return category.categoryName === categoryName;
         });
     }
@@ -99,7 +99,7 @@ const dbCategories = {
 
 window.dbCategories = dbCategories;
 
-// Write json of currencies
+//  json of currencies
 const currencies = [
     {
         currencyName: "ILS"
@@ -120,8 +120,8 @@ const currencies = [
 
 const dbCurrencies = {
     currencies: {
-        get: function(currencyName) {
-            return currencies.find(function(currency) {
+        get: function (currencyName) {
+            return currencies.find(function (currency) {
                 return currency.currencyName === currencyName;
             });
         }

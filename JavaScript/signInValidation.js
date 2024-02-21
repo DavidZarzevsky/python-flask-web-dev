@@ -1,8 +1,7 @@
-
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const signInForm = document.getElementById("login-form");
     if (signInForm) {
-        signInForm.addEventListener("submit", function(event) {
+        signInForm.addEventListener("submit", function (event) {
             event.preventDefault();
 
             const email = document.getElementById("email").value.trim();
@@ -31,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 return;
             }
 
-            // localStorage.setItem("user", email);
             window.location.href = "mainMenu.html";
         });
     } else {

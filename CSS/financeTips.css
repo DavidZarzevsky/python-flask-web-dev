@@ -1,39 +1,40 @@
 
-.content{
+.content {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.title{
+.title {
     font-size: 28px;
     color: black;
     margin: 1vh;
 }
-.content span{
+
+.content span {
     font-weight: bold;
 }
 
-.inside-title{
+.inside-title {
     font-family: Lexend, sans-serif;
     font-size: 20px;
     text-decoration: none;
 }
 
-.all-insights{
+.all-insights {
     display: flex;
     flex-direction: row;
 }
 
-.column{
+.column {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 30px;
 }
 
-.Insights{
+.Insights {
     flex-direction: column;
     align-items: center;
     width: 550px;
@@ -48,6 +49,6 @@
     text-align: center;
 }
 
-.Insights:hover{
-   box-shadow: 0 8px 14px #171a1f, 0 0 5px #171a1f;
+.Insights:hover {
+    box-shadow: 0 8px 14px #171a1f, 0 0 5px #171a1f;
 }
