@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Tracker</title>
     <script src="JavaScript/expensesView.js"></script>
+    <script src="JavaScript/staticDB.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="CSS/GlobalStyleSheet.css">
     <link rel="stylesheet" href="CSS/myExpenses.css">
@@ -37,18 +39,18 @@
             <div class="total-expenses">
                 <h1>Total Expenses:</h1>
                 <span id="totalExpenses">0</span>
-                <span>$</span>
             </div>
             <br>
             <div class="expense-dropdown">
                 <label>Select Expense Type:</label>
                 <select id="expenseTypeDropdown" onchange="updateExpensesByType()">
-                    <option value="all">All</option>
-                    <option value="housing">Housing</option>
-                    <option value="food">Food</option>
-                    <option value="transportation">Transportation</option>
-                    <option value="entertainment">Entertainment</option>
-                    <option value="others">Others</option>
+                    // Add default option as fade out text and disable it
+                    <option value="" disabled selected>Select Type</option>
+                    <option value="Housing">Housing</option>
+                    <option value="Food">Food</option>
+                    <option value="Transportation">Transportation</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Others">Others</option>
                 </select>
             </div>
 
@@ -59,4 +61,5 @@
         </div>
     </div>
 </body>
+
 </html>

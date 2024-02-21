@@ -1,8 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     const expenseData = {
-        labels: ["Housing", "Food", "Transportation", "Entertainment", "Others"],
+        labels: categories.map(function (category) {
+            return dbCategories.get(category.categoryName).categoryName;
+        }),
         datasets: [{
-            data: [20, 25, 15, 10, 30], // Replace
+            data: dbExpenses.getAllExpensesByCategory().map(function (expense) {
+                return expense.expenseAmount;
+            }),
             backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4CAF50", "#E7E9ED"],
         }]
     };
@@ -26,27 +30,31 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    const totalExpensesValue = 1769;
+    const totalExpensesValue = dbExpenses.getAllExpensesByCategory().reduce(function (total, expense) {
+        return total + expense.expenseAmount;
+    }, 0);
 
     // Display total expenses
-    document.getElementById('totalExpenses').textContent = totalExpensesValue;
+    document.getElementById('totalExpenses').textContent = totalExpensesValue + "₪";
 
     // Function to update expenses by type based on the selected dropdown value
     window.updateExpensesByType = function () {
         const selectedExpenseType = document.getElementById('expenseTypeDropdown').value;
 
-        // Sample expenses by type data (replace this with your actual data)
         const expensesByTypeData = {
-            all: "All Expenses: $1769",
-            housing: "Housing Expenses: $200",
-            food: "Food Expenses: $250",
-            transportation: "Transportation Expenses: $150",
-            entertainment: "Entertainment Expenses: $100",
-            others: "Others Expenses: $300"
+            "Food": 0,
+            "Transportation": 0,
+            "Entertainment": 0,
+            "Housing": 0,
+            "Others": 0
         };
 
-        // Display expenses by type
-        document.getElementById('expensesByType').textContent = expensesByTypeData[selectedExpenseType];
+        dbExpenses.getAllExpensesByCategory().forEach(function (expense) {
+            if (expense.expenseCategory === selectedExpenseType) {
+                expensesByTypeData[selectedExpenseType] += expense.expenseAmount;
+            }
+        });
+        document.getElementById('expensesByType').textContent = expensesByTypeData[selectedExpenseType] + "₪";
     };
 });
 

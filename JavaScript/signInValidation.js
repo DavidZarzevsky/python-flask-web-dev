@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function() {
         signInForm.addEventListener("submit", function(event) {
             event.preventDefault();
 
-            // Check if all fields are filled
             const email = document.getElementById("email").value.trim();
             const password = document.getElementById("password").value.trim();
 
@@ -14,22 +13,28 @@ document.addEventListener("DOMContentLoaded", function() {
                 return;
             }
 
-            // Check if password is at least 8 characters long
             if (password.length < 8) {
-                alert("Password must be at least 8 characters long.");
+                alert("Password is too short.");
                 return;
             }
 
-            // Validate email format
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
                 alert("Please enter a valid email address.");
                 return;
             }
-            // signInForm.submit();
+
+            const foundUser = window.dbUsers.users.get(email, password);
+
+            if (!foundUser) {
+                alert("Username or password are incorrect, to create a new user go to the register page.");
+                return;
+            }
+
+            // localStorage.setItem("user", email);
             window.location.href = "mainMenu.html";
         });
     } else {
-        console.error("Element with ID 'signin-form' not found.");
+        console.error("Element 'signin-form' not found.");
     }
 });
