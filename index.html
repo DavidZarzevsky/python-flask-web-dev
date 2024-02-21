@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <link rel="stylesheet" href="CSS/index.css">
     <script src="JavaScript/signInValidation.js"></script>
+    <script src="JavaScript/staticDB.js"></script>
 </head>
+
 <body>
 
-<div class="header-container">
-    <h1 class="animated-text">Ready to take control of your finances?</h1>
-</div>
+    <div class="header-container">
+        <h1 class="animated-text">Ready to take control of your finances?</h1>
+    </div>
 
-<div class="login-container">
-    <h2>Welcome Back &#x1F44B;</h2>
-    <p class="sub-heading">We are happy to see you again</p>
-    <form id="login-form" action="#" method="post">
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="text" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-        </div>
-        <div class="form-group">
-            <button type="submit">Login</button>
-            <br>
-            <a href="mainMenu.html" >Demo Login</a>
-        </div>
-    </form>
-    <p class="sub-heading">Don't have an account? <a href="SignUp.html">Sign up</a></p>
-</div>
+    <div class="login-container">
+        <h2>Welcome Back &#x1F44B;</h2>
+        <p class="sub-heading">We are happy to see you again</p>
+        <form id="login-form" action="#" method="post">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+        <p class="sub-heading">Don't have an account? <a href="SignUp.html">Sign up</a></p>
+    </div>
 
-<div id="image-welcome">
-    <img src="pics/X-BudgetSymbol.png" alt="Welcome Image">
-</div>
+    <div id="image-welcome">
+        <img src="pics/X-BudgetSymbol.png" alt="Welcome Image">
+    </div>
 
 </body>
+
 </html>
