@@ -1,7 +1,7 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const addExpenseForm = document.getElementById("add-expense-form");
     if (addExpenseForm) {
-        addExpenseForm.addEventListener("submit", function(event) {
+        addExpenseForm.addEventListener("submit", function (event) {
             event.preventDefault();
             const expenseName = document.getElementById("expense-category").value.trim();
             const expenseAmount = document.getElementById("expense-amount").value.trim();
@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 alert("Please fill out all fields and the amount should be positive.");
                 return;
             }
-            // addExpenseForm.submit();
             window.location.href = "mainMenu.html";
         });
     } else {
