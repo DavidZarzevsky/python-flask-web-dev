@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 expensesByTypeData[selectedExpenseType] += expense.expenseAmount;
             }
         });
-        document.getElementById('expensesByType').textContent = expensesByTypeData[selectedExpenseType] + "₪";
+        document.getElementById('expensesByType').textContent = selectedExpenseType + ": " + expensesByTypeData[selectedExpenseType] + "₪";
     };
 });
 
