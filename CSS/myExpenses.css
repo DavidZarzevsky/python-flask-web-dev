@@ -49,3 +49,27 @@
     text-align: center;
     padding: 20px;
 }
+
+.expenses-by-type {
+    display: flex;
+    background: #F5F1FEFF;
+    width: 20vw;
+    padding: 2vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.expenses-by-type h2 {
+    color: #323743FF;
+    padding: 2px;
+}
+
+#expensesByType {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26px;
+    padding: 1vh;
+    color: #323743FF;
+}
