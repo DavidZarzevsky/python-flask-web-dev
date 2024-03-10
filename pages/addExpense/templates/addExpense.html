@@ -1,30 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
+ {% block title %} Add Expense {% endblock %}
+{% block css %}<link rel="stylesheet" href="../static/css/addExpense.css">{% endblock %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lobby Page</title>
-    <script src="../static/javaScript/addExpenseValidation.js"></script>
-    <link rel="stylesheet" href="../../../static/css/GlobalStyleSheet.css">
-    <link rel="stylesheet" href="../static/css/addExpense.css">
-</head>
-
-<body>
-
-<div class="content">
-
-    <div class="top-bar">
-        <div class="image-logo">
-            <img src="../../../static/pics/X-BudgetSymbol.png" alt="Welcome Image">
-        </div>
-
-        <div class="bar-left-side">
-            <a href="../../index/templates/index.html" class="logout-button">Log out</a>
-            <a href="../../mainMenu/templates/mainMenu.html" class="mainMenu-button">Menu</a>
-        </div>
-    </div>
-
+    {% block main %}
     <div class="expense-form">
         <form id="add-expense-form" method="post">
             <h1>Add Expense &#128178;</h1>
@@ -44,8 +22,31 @@
         </form>
     </div>
 
-</div>
+{% endblock %}
+ <script src="../static/javaScript/addExpenseValidation.js"></script>
 
-</body>
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
 
-</html>
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+
+
+<!--</head>-->
+
+<!--<body>-->
+
+<!--<div class="content">-->
+
+<!--    <div class="top-bar">-->
+<!--        <div class="image-logo">-->
+<!--            <img src="../../../static/pics/X-BudgetSymbol.png" alt="Welcome Image">-->
+<!--        </div>-->
+
+<!--        <div class="bar-left-side">-->
+<!--            <a href="../../index/templates/index.html" class="logout-button">Log out</a>-->
+<!--            <a href="../../mainMenu/templates/mainMenu.html" class="mainMenu-button">Menu</a>-->
+<!--        </div>-->
+<!--    </div>-->
+

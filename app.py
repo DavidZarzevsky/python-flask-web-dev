@@ -1,9 +1,14 @@
-from flask import Flask
+from flask import Flask, redirect, url_for
+from flask import render_template
 
 ###### App setup
 app = Flask(__name__)
 app.config.from_pyfile('settings.py')
 
+
+@app.route('/')
+def add_Expense():
+   return render_template('addExpense.html')
 ###### Pages
 ## Homepage
 # from pages.index.index import index
