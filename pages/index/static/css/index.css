@@ -20,6 +20,9 @@ body {
 }
 
 .top-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     position: absolute;
     top: 1vh;
     left: 0;
@@ -31,7 +34,22 @@ body {
     animation: fadeIn 1.5s ease-out;
 }
 
+.bar-left-side {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+}
+
+@media screen and (max-width: 700px) {
+    .animated-text {
+        font-size: 16px;
+    }
+}
 .animated-text {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
     font-family: Gill Sans, sans-serif;
     color: #3498DBFF;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -56,7 +74,7 @@ body {
     margin-left: 600px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    width: 300px;
+    width: 450px;
     text-align: center;
     position: absolute;
     animation: slideInFromRight 1s ease-out;
