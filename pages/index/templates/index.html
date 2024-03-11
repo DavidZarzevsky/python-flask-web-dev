@@ -1,20 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
+{% block title %} Login {% endblock %}
+{% block css %}
+<link rel="stylesheet"
+      href="{{ url_for('index.static', filename= 'css/index.css') }}"/>
+{% endblock %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="../static/css/index.css">
-    <script src="../static/javaScript/signInValidation.js"></script>
-    <script src="../../../static/JavaScript/staticDB.js"></script>
-</head>
 
-<body>
 
-<div class="header-container">
-    <h1 class="animated-text">Ready to take control of your finances?</h1>
-</div>
+{% block main %}
 
 <div class="login-container">
     <h2>Welcome Back &#x1F44B;</h2>
@@ -39,6 +32,10 @@
     <img src="../../../static/pics/X-BudgetSymbol.png" alt="Welcome Image">
 </div>
 
-</body>
+{% endblock %}
 
-</html>
+<script src=" {{ url_for('index.static', filename='js/signInValidation.js')}}"></script>
+<script src=" {{ url_for('index.static', filename='js/staticDB.js')}}"></script>
+
+<!--    <script src="../static/js/signInValidation.js"></script>-->
+<!--    <script src="../../../static/JavaScript/staticDB.js"></script>-->

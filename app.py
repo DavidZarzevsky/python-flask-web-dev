@@ -5,10 +5,14 @@ from flask import render_template
 app = Flask(__name__)
 app.config.from_pyfile('settings.py')
 
+# #AddExpense
+from pages.addExpense.addExpense import addExpense
+app.register_blueprint(addExpense)
 
-@app.route('/')
-def add_Expense():
-   return render_template('addExpense.html')
+#Login
+from pages.index.index import index
+app.register_blueprint(index)
+
 ###### Pages
 ## Homepage
 # from pages.index.index import index

@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
  {% block title %} Add Expense {% endblock %}
-{% block css %}<link rel="stylesheet" href="../static/css/addExpense.css">{% endblock %}
+{% block css %}
+<link rel="stylesheet"
+                     href="{{ url_for('addExpense.static', filename= 'css/addExpense.css') }}"/>
+{% endblock %}
 
     {% block main %}
     <div class="expense-form">
@@ -23,30 +26,4 @@
     </div>
 
 {% endblock %}
- <script src="../static/javaScript/addExpenseValidation.js"></script>
-
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-
-<!--<head>-->
-<!--    <meta charset="UTF-8">-->
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-
-
-<!--</head>-->
-
-<!--<body>-->
-
-<!--<div class="content">-->
-
-<!--    <div class="top-bar">-->
-<!--        <div class="image-logo">-->
-<!--            <img src="../../../static/pics/X-BudgetSymbol.png" alt="Welcome Image">-->
-<!--        </div>-->
-
-<!--        <div class="bar-left-side">-->
-<!--            <a href="../../index/templates/index.html" class="logout-button">Log out</a>-->
-<!--            <a href="../../mainMenu/templates/mainMenu.html" class="mainMenu-button">Menu</a>-->
-<!--        </div>-->
-<!--    </div>-->
-
+ <script src=" {{ url_for('addExpense.static', filename='js/addExpense.js')}}"></script>
