@@ -19,7 +19,7 @@ body {
     }
 }
 
-.header-container {
+.top-bar{
     position: absolute;
     top: 1vh;
     left: 0;

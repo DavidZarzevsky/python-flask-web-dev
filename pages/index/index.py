@@ -1,5 +1,5 @@
-from flask import render_template
-from flask import Blueprint
+from flask import Blueprint, render_template
+
 
 # about blueprint definition
 index = Blueprint(
@@ -12,5 +12,6 @@ index = Blueprint(
 
 # Routes
 @index.route('/')
-def index():
+@index.route('/login')
+def indexFunc():
     return render_template('index.html')

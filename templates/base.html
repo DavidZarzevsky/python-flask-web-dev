@@ -25,25 +25,6 @@
     <body>
      {% include('header.html') %}
         {% block main %}
-            {# Header #}
-            {% block page_body_header %}
-                <header class="page-header">
-                    {% block page_body_header_content %}
-                        {# Main Menu #}
-                        {% block page_body_header_content__main_menu %}
-                            <nav class="main-menu">
-                                {% block page_body_header_content__main_menu_content %}
-                                    <ul>
-                                        {% block page_body_header_content__main_menu_content_links %}
-                                            {% include 'mainMenu.html' %}
-                                        {% endblock %}
-                                    </ul>
-                                {% endblock %}
-                            </nav>
-                        {% endblock %}
-                    {% endblock %}
-                </header>
-            {% endblock %}
         {% endblock %}
 </body>
 </html>
