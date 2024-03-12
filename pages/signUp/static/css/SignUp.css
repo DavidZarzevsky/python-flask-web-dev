@@ -150,3 +150,16 @@ button:hover {
 p {
     margin-top: 20px;
 }
+
+/* for when the page is in mobile view */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .signup-container {
+        width: 100%;
+        order: -1;
+    }
+}
