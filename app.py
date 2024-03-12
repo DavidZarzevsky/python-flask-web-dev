@@ -13,6 +13,31 @@ app.register_blueprint(addExpense)
 from pages.index.index import index
 app.register_blueprint(index)
 
+#mainMenu
+from pages.mainMenu.mainMenu import mainMenu
+app.register_blueprint(mainMenu)
+
+#financeTips
+from pages.financeTips.financeTips import financeTips
+app.register_blueprint(financeTips)
+
+#contactUs
+from pages.contactUs.contactUs import contactUs
+app.register_blueprint(contactUs)
+
+#myAccount
+from pages.myAccount.myAccount import myAccount
+app.register_blueprint(myAccount)
+
+#myExpenses
+from pages.myExpenses.myExpenses import myExpenses
+app.register_blueprint(myExpenses)
+
+#signUp
+from pages.signUp.signUp import signUp
+app.register_blueprint(signUp)
+
+
 ###### Pages
 ## Homepage
 # from pages.index.index import index

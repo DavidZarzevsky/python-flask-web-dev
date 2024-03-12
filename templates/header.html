@@ -3,7 +3,7 @@
 <header>
     <link rel="stylesheet" href="../../../static/css/GlobalStyleSheet.css">
     <div class="top-bar">
-
+        {% if request.path != '/mainMenu' %}
         <div class="image-logo">
             <img src="../../../static/pics/X-BudgetSymbol.png" alt="Welcome Image">
         </div>
@@ -14,7 +14,17 @@
             <a href="../../index/templates/index.html" class="logout-button">Log out</a>
             <a href="../../mainMenu/templates/mainMenu.html" class="mainMenu-button">Menu</a>
         </div>
-    </div>
+        {% else %}
+        <div class="image-logo">
+            <img src="../../../static/pics/X-BudgetSymbol.png" alt="Welcome Image">
+        </div>
 
+        <div class="top-bar">
+            <div class="bar-left-side">
+                <a href="../../index/templates/index.html" class="logout-button">Log out</a>
+            </div>
+        </div>
+        {% endif %}
+    </div>
 </header>
 {% endblock %}

@@ -1,29 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
+{% block title %} Main menu {% endblock %}
+{% block css %}
+<link rel="stylesheet"
+      href="{{ url_for('mainMenu.static', filename= 'css/mainMenu.css') }}"/>
+{% endblock %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lobby Page</title>
-    <link rel="stylesheet" href="../../../static/css/GlobalStyleSheet.css">
-    <link rel="stylesheet" href="../static/css/mainMenu.css">
-</head>
-
-<body>
-<div class="top-bar">
-    <div class="bar-left-side">
-        <a href="../../index/templates/index.html" class="logout-button">Log out</a>
-    </div>
-</div>
+{% block main %}
 
 <div class="content">
     <img src="../../../static/pics/X-BudgetSymbol.png" class="image content" alt="Welcome Image">
     <a href="../../addExpense/templates/addExpense.html" class="menu-button content">Add expense &#x2795;</a>
     <a href="../../myExpenses/templates/myExpenses.html" class="menu-button content">My Expenses &#x1F4B5;</a>
-    <a href="../../finanaceTips/templates/finanaceTips.html" class="menu-button content">Finance tips &#x2728;</a>
+    <a href="../../financeTips/templates/financeTips.html" class="menu-button content">Finance tips &#x2728;</a>
     <a href="../../myAccount/templates/myAccount.html" class="menu-button content">Update personal information &#x1F6E1;</a>
     <a href="../../contactUs/templates/contactUs.html" class="menu-button content">Contact us &#x260E;</a>
 </div>
-</body>
 
-</html>
+    {% endblock %}

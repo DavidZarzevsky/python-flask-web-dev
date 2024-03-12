@@ -1,27 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
+{% block title %} Contact us {% endblock %}
+{% block css %}
+<link rel="stylesheet"
+      href="{{ url_for('contactUs.static', filename= 'css/contactUs.css') }}"/>
+{% endblock %}
 
-<head>
-    <meta charset="UTF-8">
-    <title>Contact us</title>
-    <link rel="stylesheet" href="../static/css/contactUs.css">
-    <link rel="stylesheet" href="../../../static/css/GlobalStyleSheet.css">
-</head>
 
-<body>
-
-<div class="top-bar">
-    <div class="image-logo">
-        <img src="../../../static/pics/X-BudgetSymbol.png" alt="Welcome Image">
-    </div>
-
-    <div class="bar-left-side">
-        <a href="../../index/templates/index.html" class="logout-button">Log out</a>
-        <a href="../../mainMenu/templates/mainMenu.html" class="mainMenu-button">Menu</a>
-    </div>
-
-</div>
-
+{% block main %}
 
 <div class="content">
     <div class="main-page">
@@ -68,5 +53,5 @@
 
     </div>
 </div>
-</body>
-</html>
+
+{% endblock %}

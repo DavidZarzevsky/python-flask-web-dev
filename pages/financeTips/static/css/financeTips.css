@@ -52,3 +52,19 @@
 .Insights:hover {
     box-shadow: 0 8px 14px #171a1f, 0 0 5px #171a1f;
 }
+
+/* for when the page is in mobile view */
+@media (max-width: 768px) {
+    .all-insights {
+        flex-direction: column;
+    }
+
+    .column {
+        padding: 0;
+    }
+
+    .Insights {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}

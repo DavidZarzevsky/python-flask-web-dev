@@ -1,28 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
+{% block title %} Finance tips {% endblock %}
+{% block css %}
+<link rel="stylesheet"
+      href="{{ url_for('financeTips.static', filename= 'css/financeTips.css') }}"/>
+{% endblock %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lobby Page</title>
-    <link rel="stylesheet" href="../static/css/financeTips.css">
-    <link rel="stylesheet" href="../../../static/css/GlobalStyleSheet.css">
-</head>
 
-<body>
-
-<div class="top-bar">
-    <div class="image-logo">
-        <img src="../../../static/pics/X-BudgetSymbol.png" alt="Welcome Image">
-    </div>
-
-    <div class="bar-left-side">
-        <a href="../../index/templates/index.html" class="logout-button">Log out</a>
-        <a href="../../mainMenu/templates/mainMenu.html" class="mainMenu-button">Menu</a>
-    </div>
-
-</div>
-
+{% block main %}
 
 <div class="content">
     <div class="title">
@@ -81,7 +65,4 @@
     </div>
 </div>
 
-</div>
-</body>
-
-</html>
+{% endblock %}
