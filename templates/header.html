@@ -2,29 +2,40 @@
 
 <header>
     <link rel="stylesheet" href="../../../static/css/GlobalStyleSheet.css">
+
+    {% if request.path == '/' or request.path == '/login' or request.path == '/signUp' %}
     <div class="top-bar">
-        {% if request.path != '/mainMenu' %}
-        <div class="image-logo">
-            <img src="../../../static/pics/X-BudgetSymbol.png" alt="Welcome Image">
-        </div>
-        {% if request.path == '/' or request.path == '/login' %}
-        <h1 class="animated-text">Ready to take control of your finances?</h1>
-        {% endif %}
-        <div class="bar-left-side">
-            <a href="../../index/templates/index.html" class="logout-button">Log out</a>
-            <a href="../../mainMenu/templates/mainMenu.html" class="mainMenu-button">Menu</a>
-        </div>
-        {% else %}
         <div class="image-logo">
             <img src="../../../static/pics/X-BudgetSymbol.png" alt="Welcome Image">
         </div>
 
-        <div class="top-bar">
-            <div class="bar-left-side">
-                <a href="../../index/templates/index.html" class="logout-button">Log out</a>
-            </div>
-        </div>
-        {% endif %}
+        <h1 class="animated-text">Ready to take control of your finances?</h1>
     </div>
+
+    {% elif request.path == '/mainMenu' %}
+    <div class="top-bar">
+        <div class="image-logo">
+            <img src="../../../static/pics/X-BudgetSymbol.png" alt="Welcome Image">
+        </div>
+
+
+        <div class="bar-left-side">
+            <a href="{{ url_for('index.indexFunc') }}" class="logout-button">Log out</a>
+        </div>
+    </div>
+
+    {% else %}
+    <div class="top-bar">
+        <div class="image-logo">
+            <img src="../../../static/pics/X-BudgetSymbol.png" alt="Welcome Image">
+        </div>
+
+        <div class="bar-left-side">
+            <a href="{{ url_for('index.indexFunc') }}" class="logout-button">Log out</a>
+            <a href="{{ url_for('mainMenu.mainMenuFunc') }}" class="mainMenu-button">Menu</a>
+        </div>
+    </div>
+    {% endif %}
+
 </header>
 {% endblock %}
