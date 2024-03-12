@@ -150,6 +150,16 @@ button:hover {
 p {
     margin-top: 20px;
 }
+.animated-text {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-family: Gill Sans, sans-serif;
+    color: #3498DBFF;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 1.7vh;
+}
 
 /* for when the page is in mobile view */
 @media (max-width: 768px) {
