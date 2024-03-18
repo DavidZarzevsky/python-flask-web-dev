@@ -1,10 +1,8 @@
 {% extends 'base.html' %}
  {% block title %} Add Expense {% endblock %}
 {% block css %}
-<link rel="stylesheet"
-                     href="{{ url_for('addExpense.static', filename= 'css/addExpense.css') }}"/>
+<link rel="stylesheet" href="{{ url_for('addExpense.static', filename= 'css/addExpense.css') }}"/>
 {% endblock %}
-
     {% block main %}
     <div class="expense-form">
         <form id="add-expense-form" method="post">
@@ -24,8 +22,9 @@
             <input type="submit" value="Submit">
         </form>
     </div>
-
 {% endblock %}
- <script src=" {{ url_for('addExpense.static', filename='js/addExpense.js')}}"></script>
+{% block page_body_js %}
+    <script src=" {{ url_for('addExpense.static', filename='js/addExpense.js')}}"></script>
     <script src="../../../static/js/staticDB.js"></script>
+{% endblock %}
 

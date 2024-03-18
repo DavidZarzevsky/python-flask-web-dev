@@ -4,7 +4,6 @@
     {% block page_head %}
         {# Title #}
         <title> {% block title %} Base {% endblock %}</title>
-
         {# Meta tags #}
         {% block page_head_meta %}
             <base href="/"/>
@@ -19,12 +18,17 @@
         {# CSS #}
         <link rel="stylesheet" href="static/css/GlobalStyleSheet.css"/>
         {% block css %}{% endblock %}
-
     {% endblock %}
     </head>
     <body>
-     {% include('header.html') %}
+    {% include('header.html') %}
         {% block main %}
         {% endblock %}
-</body>
+        {% if msg %}
+        <div id="message-container" class="message-container">
+            <div class="message">{{ msg }}</div>
+        </div>
+        {% endif %}
+    {% block page_body_js %}{% endblock %}
+    </body>
 </html>

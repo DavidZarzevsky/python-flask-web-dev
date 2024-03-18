@@ -5,14 +5,11 @@
       href="{{ url_for('index.static', filename= 'css/index.css') }}"/>
 {% endblock %}
 
-
-
 {% block main %}
-
 <div class="login-container">
     <h2>Welcome Back &#x1F44B;</h2>
     <p class="sub-heading">We are happy to see you again</p>
-    <form id="login-form" action="#" method="post">
+    <form id="login-form" action="{{ url_for('index.loginFunc') }}" method="POST">
         <div class="form-group">
             <label for="email">Email:</label>
             <input type="text" id="email" name="email" required>
@@ -31,11 +28,11 @@
 <div id="image-welcome">
     <img src="../../../static/pics/X-BudgetSymbol.png" alt="Welcome Image">
 </div>
-
 {% endblock %}
 
-<script src=" {{ url_for('index.static', filename='js/signInValidation.js')}}"></script>
-<script src=" {{ url_for('index.static', filename='js/staticDB.js')}}"></script>
+{% block page_body_js %}
+    <script src=" {{ url_for('index.static', filename='js/signInValidation.js')}}"></script>
+    <script src="../../../static/js/staticDB.js"></script>
+{% endblock %}
 
-<!--    <script src="../static/js/signInValidation.js"></script>-->
-<!--    <script src="../../../static/js/staticDB.js"></script>-->
+

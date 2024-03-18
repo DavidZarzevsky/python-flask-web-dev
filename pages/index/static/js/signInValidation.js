@@ -22,15 +22,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 alert("Please enter a valid email address.");
                 return;
             }
+            signInForm.submit();
 
-            const foundUser = window.dbUsers.users.get(email, password);
-
-            if (!foundUser) {
-                alert("Username or password are incorrect, to create a new user go to the register page.");
-                return;
-            }
-
-            window.location.href = "mainMenu.html";
+            // const foundUser = window.dbUsers.users.get(email, password);
+            //
+            // if (!foundUser) {
+            //     alert("Username or password are incorrect, to create a new user go to the register page.");
+            //     return;
+            // }
+            // window.location.href = 'mainMenu'
         });
     } else {
         console.error("Element 'signin-form' not found.");

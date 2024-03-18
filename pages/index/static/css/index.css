@@ -20,7 +20,6 @@ body {
 }
 
 .top-bar{
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     position: absolute;
@@ -34,31 +33,19 @@ body {
     animation: fadeIn 1.5s ease-out;
 }
 
-.bar-left-side {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 10px;
-    width: 20vw;
-    height: 15vh;
-}
-
 @media screen and (max-width: 700px) {
     .animated-text  {
         font-size: 16px;
     }
 }
 
-
 .animated-text {
-    display: flex;
     flex-direction: column;
-    padding: 10px;
     font-family: Gill Sans, sans-serif;
     color: #3498DBFF;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin-top: 1.7vh;
+    margin-right: 50vh;
 }
 
 @keyframes slideInFromRight {

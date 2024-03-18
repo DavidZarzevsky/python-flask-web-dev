@@ -1,10 +1,20 @@
-from flask import Flask, redirect, url_for
-from flask import render_template
+from flask import Flask, render_template, request, redirect, url_for, session
+from settings import SECRET_KEY
+from dbHandler import *
 
 ###### App setup
 app = Flask(__name__)
 app.config.from_pyfile('settings.py')
 
+##session
+app.secret_key = '123'
+
+@app.route('/logout')
+def logout():
+    session.clear()
+    return redirect(url_for('index.loginFunc'))
+
+##Pages
 # #AddExpense
 from pages.addExpense.addExpense import addExpense
 app.register_blueprint(addExpense)
@@ -37,40 +47,3 @@ app.register_blueprint(myExpenses)
 from pages.signUp.signUp import signUp
 app.register_blueprint(signUp)
 
-
-###### Pages
-## Homepage
-# from pages.index.index import index
-#
-# app.register_blueprint(index)
-#
-# ## About
-# from pages.about.about import about
-#
-# app.register_blueprint(about)
-#
-# ## Profile
-# from pages.profile.profile import profile
-#
-# app.register_blueprint(profile)
-#
-# ## Profile
-# from pages.menu.menu import menu
-#
-# app.register_blueprint(menu)
-#
-# ## Catalog
-# from pages.catalog.catalog import catalog
-#
-# app.register_blueprint(catalog)
-#
-# ## Page error handlers
-# from pages.page_error_handlers.page_error_handlers import page_error_handlers
-#
-# app.register_blueprint(page_error_handlers)
-#
-# ###### Components
-# ## Main menu
-# from components.main_menu.main_menu import main_menu
-#
-# app.register_blueprint(main_menu)
