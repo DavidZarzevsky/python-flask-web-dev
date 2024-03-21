@@ -1,5 +1,7 @@
 from flask import Blueprint, render_template
 
+from app import login_required
+
 financeTips = Blueprint(
     'financeTips',
     __name__,
@@ -10,5 +12,6 @@ financeTips = Blueprint(
 
 # Routes
 @financeTips.route('/financeTips')
+@login_required
 def finanaceTipsFunc():
     return render_template('financeTips.html')

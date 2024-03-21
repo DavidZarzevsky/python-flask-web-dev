@@ -1,10 +1,9 @@
-import os
 from datetime import datetime
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 from settings import DB_URI
 
-# get your uri from .env file
+# get the uri from .env file
 uri = DB_URI
 
 # create client
@@ -13,9 +12,11 @@ client = MongoClient(uri, server_api=ServerApi('1'), tlsInsecure=True)
 # Connections
 db = client['Xbudget']
 users_collection = db['users']
+expenses_collection = db['expenses']
 
 # create user
 def create_user(email, password, firstName, lastName, dateOfBirth, currency, gender):
+    email = email.lower()
     user = {
         'Email': email,
         'Password': password,
@@ -40,3 +41,18 @@ def is_registered(email):
         return True
     else:
         return False
+
+# add expense
+def add_expense(email, category, amount):
+    expense = {
+        'Email': email,
+        'Category': category,
+        'Amount': amount,
+        'CreatedAt': datetime.now()
+    }
+    expenses_collection.insert_one(expense)
+
+# get expenses
+def get_expenses(email):
+    expenses = expenses_collection.find({'Email': email})
+    return expenses

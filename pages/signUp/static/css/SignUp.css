@@ -159,6 +159,8 @@ p {
     }
 }
 
+/* Message alert */
+
 .message-container {
     position: fixed;
     top: 50%;

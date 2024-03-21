@@ -1,5 +1,7 @@
 from flask import Blueprint, render_template
 
+from app import login_required
+
 contactUs = Blueprint(
     'contactUs',
     __name__,
@@ -10,5 +12,6 @@ contactUs = Blueprint(
 
 # Routes
 @contactUs.route('/contactUs')
+@login_required
 def contactUsFunc():
     return render_template('contactUs.html')

@@ -1,4 +1,5 @@
 from flask import Blueprint, render_template
+from app import login_required
 
 mainMenu = Blueprint(
     'mainMenu',
@@ -10,5 +11,6 @@ mainMenu = Blueprint(
 
 # Routes
 @mainMenu.route('/mainMenu')
+@login_required
 def mainMenuFunc():
     return render_template('mainMenu.html')

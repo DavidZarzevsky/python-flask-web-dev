@@ -5,17 +5,22 @@
 {% endblock %}
     {% block main %}
     <div class="expense-form">
-        <form id="add-expense-form" method="post">
+        <form id="add-expense-form" action="{{ url_for('addExpense.addExpenseFunc') }}" method="POST">
             <h1>Add Expense &#128178;</h1>
             <label for="expense-category">Select Category:</label>
             <select id="expense-category" name="expense-category">
-                <option value="">Choose expense</option>
+                <option value="" disabled selected>Choose expense</option>
                 <option value="food">Food</option>
                 <option value="transportation">Transportation</option>
                 <option value="utilities">Utilities</option>
                 <option value="entertainment">Entertainment</option>
+                <option value="clothing">Clothing</option>
+                <option value="health">Health</option>
+                <option value="insurance">Insurance</option>
+                <option value="education">Education</option>
+                <option value="gifts">Gifts</option>
+                <option value="other">Other</option>
             </select>
-
             <label for="expense-amount">Enter Amount:</label>
             <input type="number" id="expense-amount" name="expense-amount" required>
 
@@ -24,7 +29,7 @@
     </div>
 {% endblock %}
 {% block page_body_js %}
-    <script src=" {{ url_for('addExpense.static', filename='js/addExpense.js')}}"></script>
+    <script src="{{ url_for('addExpense.static', filename= 'js/addExpenseValidation.js') }}"></script>
     <script src="../../../static/js/staticDB.js"></script>
 {% endblock %}
 

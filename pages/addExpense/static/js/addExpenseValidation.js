@@ -1,3 +1,4 @@
+//get user from local storage
 document.addEventListener("DOMContentLoaded", function () {
     const addExpenseForm = document.getElementById("add-expense-form");
     if (addExpenseForm) {
@@ -9,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 alert("Please fill out all fields and the amount should be positive.");
                 return;
             }
-            window.location.href = "mainMenu.html";
+            addExpenseForm.submit();
         });
     } else {
         console.error("Element with ID 'add-expense-form' not found.");

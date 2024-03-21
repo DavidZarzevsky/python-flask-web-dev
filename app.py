@@ -1,3 +1,4 @@
+from functools import wraps
 from flask import Flask, render_template, request, redirect, url_for, session
 from settings import SECRET_KEY
 from dbHandler import *
@@ -7,43 +8,63 @@ app = Flask(__name__)
 app.config.from_pyfile('settings.py')
 
 ##session
-app.secret_key = '123'
+app.secret_key = SECRET_KEY
 
 @app.route('/logout')
 def logout():
     session.clear()
     return redirect(url_for('index.loginFunc'))
 
+
+# This function ensures that certain routes can only be accessed by authenticated users
+def login_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if 'username' not in session:
+            return redirect(url_for('index.loginFunc'))
+        return f(*args, **kwargs)
+    return decorated_function
+
 ##Pages
 # #AddExpense
 from pages.addExpense.addExpense import addExpense
+
 app.register_blueprint(addExpense)
 
-#Login
+# Login
 from pages.index.index import index
+
 app.register_blueprint(index)
 
-#mainMenu
+# mainMenu
 from pages.mainMenu.mainMenu import mainMenu
+
 app.register_blueprint(mainMenu)
 
-#financeTips
+# financeTips
 from pages.financeTips.financeTips import financeTips
+
 app.register_blueprint(financeTips)
 
-#contactUs
+# contactUs
 from pages.contactUs.contactUs import contactUs
+
 app.register_blueprint(contactUs)
 
-#myAccount
+# myAccount
 from pages.myAccount.myAccount import myAccount
+
 app.register_blueprint(myAccount)
 
-#myExpenses
+# myExpenses
 from pages.myExpenses.myExpenses import myExpenses
+
 app.register_blueprint(myExpenses)
 
-#signUp
+# signUp
 from pages.signUp.signUp import signUp
+
 app.register_blueprint(signUp)
 
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=8080)

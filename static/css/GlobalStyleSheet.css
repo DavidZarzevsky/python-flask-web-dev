@@ -26,6 +26,11 @@ body {
     box-shadow: 0 3px 20px rgba(23, 26, 31, 0.3), 0 0 2px rgba(23, 26, 31, 0.2);
 }
 
+.top-bar div{
+    display: flex;
+    align-items: center;
+}
+
 .logout-button, .mainMenu-button {
     background-color: #3498DBFF;
     color: #fff;
