@@ -29,6 +29,10 @@ def create_user(email, password, firstName, lastName, dateOfBirth, currency, gen
     }
     users_collection.insert_one(user)
 
+def print_all_users():
+    for user in users_collection.find():
+        print(user)
+
 # get user by email
 def get_user_by_email(email):
     user = users_collection.find_one({'Email': email})
@@ -56,3 +60,5 @@ def add_expense(email, category, amount):
 def get_expenses(email):
     expenses = expenses_collection.find({'Email': email})
     return expenses
+
+print_all_users()

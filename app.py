@@ -15,6 +15,10 @@ def logout():
     session.clear()
     return redirect(url_for('index.loginFunc'))
 
+@app.route('/health')
+def health_check():
+    # Perform any necessary checks to determine the health status
+    return 'OK', 200
 
 # This function ensures that certain routes can only be accessed by authenticated users
 def login_required(f):

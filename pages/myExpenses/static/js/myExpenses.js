@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
         labels: Object.keys(expensesData),
         datasets: [{
             data: Object.values(expensesData),
-            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4CAF50", "#E7E9ED", "#FF6384", "#36A2EB", "#FFCE56", "#4CAF50", "#E7E9ED"]
+            //add many different colors for every expense type
+            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4CAF50", "#E7E9ED", "#FF5733", "#33FF57", "#5733FF", "#33FFC5"]
         }]
     };
 

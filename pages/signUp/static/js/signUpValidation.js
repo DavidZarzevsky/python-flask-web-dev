@@ -48,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             alert("Welcome to X-Budget! Let's start managing your finances!")
             signupForm.submit()
-            window.location.href = "index.html";
         });
 
     } else {
