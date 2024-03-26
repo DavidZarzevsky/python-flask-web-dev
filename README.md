@@ -3,16 +3,53 @@
 ## Description
 This project is a web application that allows users to manage their expenses. The application is built using HTML, CSS, JavaScript.
 
-### **Login credentials**:
-To login use these credentials that are already in the database:
+## Visit our website: [x-budget](http://david-adam-1317051721.us-east-2.elb.amazonaws.com/)!!!
 
-```JavaScript
-        email: adam-david@gmail.com
-        password: 12345678
+## Technologies
+* [Python](https://www.python.org/)
+* [Flask](https://flask.palletsprojects.com/en/2.0.x/)
+* [mongoDB](https://www.mongodb.com/)
+* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+* [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+## Installation
+
+### Clone the repository
+```shell
+git clone 'repository_url'
 ```
+
+### Install dependencies
+```shell
+pip install -r requirements.txt
+```
+
+### edit the .env file
+```shell
+FLASK_ENV = development
+DEBUG = TRUE
+FLASK_RUN_HOST = your_host
+FLASK_RUN_PORT = your_port
+
+SECRET_KEY = your_secret_key
+
+DB_URI = db_uri
+```
+
+### Run the application
+```shell
+flask run
+```
+
+## Usage
+The application is a web application that allows users to manage their expenses. The application contains the following pages:
+
 ### **Login page**:
 The login page is the first page the user will see when he enters the site. It contains two input fields, one for the email and one for the password. 
 The user can also click on the "sing up" button to go to the registration page.
+
+
 
 ### **Registration page**:
 The registration page contains input fields for the user's personal details, such as name, email, password, and more. 
@@ -26,45 +63,4 @@ The main menu is the first screen the user will see after logging in, it contain
 * **Update personal information**: A page where the user can update his personal details.
 * **Contact us**: A page with contact details for the site's support.
 
-### **staticDB.js**:
-This file contains the database of the application, it contains the users and their expenses.
-This file is used to simulate a real database.
 
-## Directory Structure
-
-<pre>
-
-├── group23/
-│   ├── CSS/
-│   │   ├── addExpense.css
-│   │   ├── contactUs.css
-│   │   ├── financeTips.css
-│   │   ├── GlobalSteleSheet.css
-│   │   ├── index.css
-│   │   ├── mainMenu.css
-│   │   ├── myExpenses.css
-│   │   ├── myAccount.css
-│   │   ├── SingUp.css
-│   ├── DOCS/
-│   │   ├── web_group23.docx
-│   ├── JavaScript/
-│   │   ├── addExpenseValidation.js
-│   │   ├── myAccountValidation.js
-│   │   ├── myExpenses.js
-│   │   ├── singInValidation.js
-│   │   ├── singUpValidation.js
-│   │   ├── staticDB.js
-│   ├── pics/
-│   │   ├── Workers.png
-│   │   ├── X-BudgetSymbol.png
-│   ├── index.html
-│   ├── README.md
-│   ├── addExpense.html
-│   ├── contactUs.html
-│   ├── financeTips.html
-│   ├── mainMenu.html
-│   ├── myAccount.html
-│   ├── myExpenses.html
-│   ├── singIUp.html
-├── .gitignore
-</pre>

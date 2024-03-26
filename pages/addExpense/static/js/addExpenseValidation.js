@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 alert("Please fill out all fields and the amount should be positive.");
                 return;
             }
+            alert("Expense added!")
             addExpenseForm.submit();
         });
     } else {

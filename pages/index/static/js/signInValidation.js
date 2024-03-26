@@ -23,14 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
             signInForm.submit();
-
-            // const foundUser = window.dbUsers.users.get(email, password);
-            //
-            // if (!foundUser) {
-            //     alert("Username or password are incorrect, to create a new user go to the register page.");
-            //     return;
-            // }
-            // window.location.href = 'mainMenu'
         });
     } else {
         console.error("Element 'signin-form' not found.");

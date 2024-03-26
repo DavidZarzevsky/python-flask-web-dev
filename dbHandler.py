@@ -60,5 +60,3 @@ def add_expense(email, category, amount):
 def get_expenses(email):
     expenses = expenses_collection.find({'Email': email})
     return expenses
-
-print_all_users()
