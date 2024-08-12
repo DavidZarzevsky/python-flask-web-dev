@@ -1,0 +1,33 @@
+.content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu-button {
+    width: 26vw;
+    background-color: #3498DBFF;
+    color: #fff;
+    padding: 1.5vh 2vw;
+    font-size: 2.2vh;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 auto 1.5vh;
+    text-align: center;
+    transition: background-color 0.2s ease-in-out;
+    text-decoration: none;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.menu-button:hover,
+.logout-button:hover {
+    background-color: #2E86C1FF;
+}
+
+.image {
+    margin: 30px;
+    width: 300px;
+    height: auto;
+}

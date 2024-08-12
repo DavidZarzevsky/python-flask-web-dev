@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %} Main menu {% endblock %}
+{% block css %}
+<link rel="stylesheet"
+      href="{{ url_for('mainMenu.static', filename= 'css/mainMenu.css') }}"/>
+{% endblock %}
+
+{% block main %}
+<div class="content">
+    <img src="../../../static/pics/X-BudgetSymbol.png" class="image content" alt="Welcome Image">
+    <a href="{{ url_for('addExpense.addExpenseFunc') }}" class="menu-button content">Add expense &#x2795;</a>
+    <a href="{{ url_for('myExpenses.myExpensesFunc') }}" class="menu-button content">My Expenses &#x1F4B5;</a>
+    <a href="{{ url_for('financeTips.finanaceTipsFunc') }}" class="menu-button content">Finance tips &#x2728;</a>
+    <a href="{{ url_for('myAccount.myAccountFunc') }}" class="menu-button content">Update personal information &#x1F6E1;</a>
+    <a href="{{ url_for('contactUs.contactUsFunc') }}" class="menu-button content">Contact us &#x260E;</a>
+</div>
+{% endblock %}

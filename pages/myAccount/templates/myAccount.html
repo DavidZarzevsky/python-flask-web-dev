@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block title %} My account {% endblock %}
+{% block css %}
+<link rel="stylesheet"
+      href="{{ url_for('myAccount.static', filename= 'css/myAccount.css') }}"/>
+{% endblock %}
+
+{% block main %}
+
+<div class="page">
+    <div class="personal-info">
+        <form id="myAccountForm" action="#" method="post">
+            <h1 class="update-info-h1">Update your information &#x1F504;</h1>
+            <div class="input-row">
+                <div class="first-name">
+                    <label class="label" for="FirstNameTextBox">First name:</label>
+                    <input type="text" id="FirstNameTextBox" name="FirstName" placeholder="First name">
+                </div>
+                <div class="last-name">
+
+                    <label class="label" for="LastNameTextBox">Last name:</label>
+                    <input type="text" id="LastNameTextBox" name="LastName" placeholder="Last name">
+
+                </div>
+
+            </div>
+
+            <div class="email-group">
+                <label class="email-label" for="EmailTextBox">Email address:</label>
+                <input type="text" id="EmailTextBox" name="Email" placeholder="example.email@gmail.com">
+            </div>
+
+            <div class="currNgender-group">
+                <div class="currency">
+                    <label for="currency-category">Select currency:</label>
+                    <select id="currency-category" name="currency-category">
+                        <option value="">Choose currency</option>
+                        <option value="₪">₪ ILS</option>
+                        <option value="$">$ USD</option>
+                        <option value="€">€ EUR</option>
+                        <option value="£">£ GBP</option>
+                    </select>
+
+                </div>
+                <div class="gender">
+
+                    <label for="gender-category">Select gender:</label>
+                    <select id="gender-category" name="gender-category">
+                        <option value="">Choose gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="prefer-not-to-say">Prefer not to say</option>
+                    </select>
+                </div>
+            </div>
+            <div class="age">
+                <label for="date"> Birthdate:</label>
+                <input type="date" id="date" name="date">
+            </div>
+
+            <div class="buttons">
+                <button type="submit" class="save">Save changes</button>
+                <button type="reset" class="cancel">cancel changes</button>
+            </div>
+        </form>
+    </div>
+
+
+</div>
+
+{% endblock %}
+
+<script src=" {{ url_for('myAccount.static', filename='js/myAccount.js')}}"></script>
+

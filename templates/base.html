@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+ <html lang="{{ page_lang|default('en', true) }}">
+    <head>
+    {% block page_head %}
+        {# Title #}
+        <title> {% block title %} Base {% endblock %}</title>
+        {# Meta tags #}
+        {% block page_head_meta %}
+            <base href="/"/>
+            <meta charset="UTF-8"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="description" content="Web project"/>
+        {% endblock %}
+        {# favicon #}
+        <link rel="icon" href="static/pics/X-BudgetSymbol.png" type="image/png"/>
+        {# Base #}
+        <base href="/"/>
+        {# CSS #}
+        <link rel="stylesheet" href="static/css/GlobalStyleSheet.css"/>
+        {% block css %}{% endblock %}
+    {% endblock %}
+    </head>
+    <body>
+    {% include('header.html') %}
+        {% block main %}
+        {% endblock %}
+        {% if msg %}
+        <div id="message-container" class="message-container">
+            <div class="message">{{ msg }}</div>
+        </div>
+        {% endif %}
+    {% block page_body_js %}{% endblock %}
+    </body>
+</html>

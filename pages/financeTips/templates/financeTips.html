@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block title %} Finance tips {% endblock %}
+{% block css %}
+<link rel="stylesheet"
+      href="{{ url_for('financeTips.static', filename= 'css/financeTips.css') }}"/>
+{% endblock %}
+
+
+{% block main %}
+
+<div class="content">
+    <div class="title">
+        <h1><span> Daily Tips</span> &#x1F4A1;</h1>
+    </div>
+
+    <div class="all-insights">
+        <div class="column">
+            <div class="Insights" id="insights1">
+                <div class="inside-title">
+                    <p class="emoji">&#x1F4A1; <span>Make a Money Plan</span></p>
+                </div>
+                <p>
+                    Write down how much money you get and spend. Decide how much goes to important stuff, saving,
+                    and
+                    fun things.
+                </p>
+            </div>
+
+            <div class="Insights" id="insights2">
+                <div class="inside-title">
+                    <p class="emoji">&#x1F4A1; <span>Invest for the Future</span></p>
+
+                </div>
+                <p>
+                    Put some money in different places, like stocks or bonds, so it can grow over time. Think
+                    long-term
+                    and don't worry too much about short-term changes.
+                </p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="Insights" id="insights3">
+                <div class="inside-title">
+                    <p class="emoji">&#x1F4A1; <span>Save for Surprises</span></p>
+
+                </div>
+                <p>
+                    Keep some money aside for unexpected problems, like car troubles or medical bills. It helps you
+                    handle surprises without borrowing money.
+                </p>
+            </div>
+
+            <div class="Insights" id="insights4">
+                <div class="inside-title">
+                    <p class="emoji">&#x1F4A1; <span>Deal with Debts Smartly</span></p>
+                </div>
+                <p>
+                    If you owe money, first pay off the expensive debts. Combine or change loans for better deals.
+                    Keep
+                    an eye on your credit score for better money opportunities.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
